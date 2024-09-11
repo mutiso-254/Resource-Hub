@@ -1,0 +1,116 @@
+<!-- THIS IS AN EXAMPLE PAGE AND SHOULD NOT BE USED OUTSIDE OF DEVELOPMENT -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Jambojet AI Agent</title>
+  <style>
+    body {
+      background-color: #f9f9f9;
+    }
+
+    #flat-chat {
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    #confetti-canvas {
+      position: fixed;
+      z-index: 999;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+    }
+  </style>
+</head>
+
+<body>
+  <canvas id="confetti-canvas"></canvas>
+
+  <h1>Jambojet AI Agent</h1>
+
+
+  <div id="flat-chat"></div>
+  <div id="voiceflow-chat-frame"></div>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <!-- <script type="module">
+    import {
+      DateExtension,
+      PaystackExtension
+    } from '/extensions.js';
+
+    (function (d, t) {
+      var v = d.createElement(t),
+        s = d.getElementsByTagName(t)[0];
+      v.onload = function () {
+        window.voiceflow.chat.load({
+          verify: { projectID: '66740054dec9b1818a36797d' },
+          url: 'https://general-runtime.voiceflow.com',
+          versionID: 'production',
+          user: {
+            name: 'Demo User',
+          },
+          render: {
+            mode: 'overlay',
+          },
+          autostart: true,
+          allowDangerousHTML: true,
+          assistant: {
+            extensions: [
+              PaystackExtension,
+              DateExtension,
+            ],
+          },
+        });
+      };
+      v.src = 'https://cdn.voiceflow.com/widget/bundle.mjs';
+      v.type = 'text/javascript';
+      s.parentNode.insertBefore(v, s);
+    })(document, 'script');
+  </script> -->
+
+  <script src="https://js.paystack.co/v1/inline.js"></script>
+
+
+
+  <script type="module">
+
+    import {
+      SeatSelectorv2Extension,
+      PaystackExtension,
+      DateExtension,
+      AdultFormExtension,
+      ChildFormExtension,
+      InfantFormExtension
+    } from '/extensions.js';
+
+    (function (d, t) {
+      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      v.onload = function () {
+        window.voiceflow.chat.load({
+          verify: { projectID: '66740054dec9b1818a36797d' },
+          url: 'https://general-runtime.voiceflow.com',
+          versionID: 'production',
+          assistant: {
+            extensions: [
+              SeatSelectorv2Extension,
+              PaystackExtension,
+              DateExtension,
+              AdultFormExtension,
+              ChildFormExtension,
+              InfantFormExtension
+            ]
+          }
+        });
+      }
+      v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+    })(document, 'script');
+  </script>
+</body>
+
+</html>
