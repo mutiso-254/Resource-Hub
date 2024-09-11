@@ -114,7 +114,7 @@ export const PaystackExtension = {
     console.log("Here's the email: ", trace.payload.email, trace.payload.amount)
 
     let handler = PaystackPop.setup({
-      key: 'pk_test_e0f88e0ae3e2e22ccc3f6c811643127e2a9525e5', // Replace with your public key
+      key: 'pk_test_***********************', // Replace with your public key
       email: `${trace.payload.email}`,
       amount: `${trace.payload.amount}00`,
       currency: "KES",
